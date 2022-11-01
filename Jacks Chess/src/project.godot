@@ -1,0 +1,54 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Control",
+"class": "Board",
+"language": "GDScript",
+"path": "res://Board.gd"
+}, {
+"base": "Node",
+"class": "Engine",
+"language": "GDScript",
+"path": "res://engine/Engine.gd"
+}, {
+"base": "Node",
+"class": "Piece",
+"language": "GDScript",
+"path": "res://piece.gd"
+} ]
+_global_script_class_icons={
+"Board": "",
+"Engine": "",
+"Piece": ""
+}
+
+[application]
+
+config/name="Chess"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Pieces="*res://Pieces.tscn"
+
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
+[display]
+
+window/size/width=640
+window/size/height=980
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
